@@ -33,9 +33,9 @@ class Panel extends PureComponent {
   }
 
   componentWillReceiveProps = ({ isOpen }) => {
-    this.state = {
+    this.setState({
       isOpen
-    }
+    })
   }
 
   render () {
