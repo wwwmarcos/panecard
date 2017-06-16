@@ -1,0 +1,74 @@
+.react-panel-header {
+  margin: 0.5px 0px 0.5px 0px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 15px;
+}
+
+.react-panel-header span {
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #337ab7
+}
+
+.react-panel-header span:hover {
+  color: #235782;
+}
+
+.react-panel-body {
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 30px 30px 30px 30px;
+  margin: 0px 0px 5px 0px;
+}
+
+.react-panel-header-open {
+  margin: 5px 0px 0px 0px;
+}
+
+.minimized-card {
+  padding: 0px 50px 0px 50px;
+}
+
+.react-panel-success {
+  background-color: #dff0d8;
+}
+
+.react-panel-warning {
+  background-color: #fcf8e3;
+}
+
+.react-panel-danger {
+  background-color: #f2dede;
+}
+
+.react-panel-info {
+  border: #ffffff;
+  background-color: #d9edf7;
+}
+
+.react-panel-disabled {
+  background-color: #EBEBE4;
+}
+
+.card-sub-title {
+  color: #6C7A89;
+  font-weight: 500;
+}
+
+.react-panel-sub-title {
+  color: #6C7A89;
+  margin-top: 10px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.react-panel-line-height {
+  line-height: 20px;
+}
+
+.react-panel-options {
+  float: right;
+}
