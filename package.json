@@ -7,7 +7,7 @@
     "test:only": "ava -v",
     "test": "nyc ava -v",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "test:watch": "ava -v -- --watch"
+    "test:watch": "ava -v  --watch"
   },
   "devDependencies": {
     "ava": "^0.19.1",
