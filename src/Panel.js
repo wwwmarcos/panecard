@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { INFO } from './PanelTypes'
 import PanelHeader from './PanelHeader'
 import PanelBody from './PanelBody'
-import './Panel.css'
 import PropTypes from 'prop-types'
 
 class Panel extends PureComponent {
@@ -16,7 +15,7 @@ class Panel extends PureComponent {
     panelTitle: PropTypes.string.isRequired,
     options: PropTypes.any,
     panelType: PropTypes.string,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node
   }
 
   constructor (props) {
@@ -49,7 +48,7 @@ class Panel extends PureComponent {
           togglePanel={this.togglePanel}
           panelType={this.props.panelType} />
 
-        { this.state.isOpen ? <PanelBody content={this.props.children} /> : null }
+        { this.state.isOpen ? <PanelBody content={this.props.children} /> : null}
 
       </div>
     )
