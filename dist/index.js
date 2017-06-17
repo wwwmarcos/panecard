@@ -69,7 +69,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var PanelTypes = _interopRequireWildcard(_PanelTypes);
 
-	__webpack_require__(41);
+	__webpack_require__(43);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -100,11 +100,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _PanelHeader2 = _interopRequireDefault(_PanelHeader);
 
-	var _PanelBody = __webpack_require__(40);
+	var _PanelBody = __webpack_require__(42);
 
 	var _PanelBody2 = _interopRequireDefault(_PanelBody);
 
-	__webpack_require__(41);
+	var _propTypes = __webpack_require__(40);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -131,9 +133,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _this.componentWillReceiveProps = function (_ref) {
 	      var isOpen = _ref.isOpen;
 
-	      _this.state = {
+	      _this.setState({
 	        isOpen: isOpen
-	      };
+	      });
 	    };
 
 	    _this.state = {
@@ -145,10 +147,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(Panel, [{
 	    key: 'render',
 	    value: function render() {
-
 	      return _react2.default.createElement(
 	        'div',
-	        { className: !this.state.isOpen ? "minimized-card" : null },
+	        { className: !this.state.isOpen ? 'minimized-card' : null },
 	        _react2.default.createElement(_PanelHeader2.default, {
 	          isOpen: this.state.isOpen,
 	          panelTitle: this.props.panelTitle,
@@ -166,6 +167,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	Panel.defaultProps = {
 	  isOpen: false,
 	  panelType: _PanelTypes.INFO
+	};
+	Panel.propTypes = {
+	  isOpen: _propTypes2.default.bool,
+	  panelTitle: _propTypes2.default.string.isRequired,
+	  options: _propTypes2.default.any,
+	  panelType: _propTypes2.default.string,
+	  children: _propTypes2.default.node
 	};
 	exports.default = Panel;
 
@@ -4812,6 +4820,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _propTypes = __webpack_require__(40);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var PanelHeader = function PanelHeader(_ref) {
@@ -4820,17 +4832,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	      options = _ref.options,
 	      togglePanel = _ref.togglePanel,
 	      panelType = _ref.panelType;
+
+	  var getTitle = function getTitle() {
+	    return isOpen ? 'Minimizar' : 'Expandir';
+	  };
+
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'react-panel-header react-panel-header-open react-panel-' + panelType + (isOpen ? ' react-panel-header-open' : '') },
 	    _react2.default.createElement(
 	      'span',
-	      { onClick: togglePanel, title: isOpen ? 'Minimizar' : 'Expandir' },
+	      { onClick: togglePanel, title: getTitle() },
 	      panelTitle
 	    ),
 	    _react2.default.createElement(
 	      'a',
-	      { className: 'react-panel-options', onClick: togglePanel, title: isOpen ? 'Minimizar' : 'Expandir' },
+	      { className: 'react-panel-options', onClick: togglePanel, title: getTitle() },
 	      isOpen ? 'X' : '-'
 	    ),
 	    _react2.default.createElement(
@@ -4841,10 +4858,120 @@ return /******/ (function(modules) { // webpackBootstrap
 	  );
 	};
 
+	PanelHeader.propTypes = {
+	  isOpen: _propTypes2.default.bool.isRequired,
+	  panelTitle: _propTypes2.default.string.isRequired,
+	  options: _propTypes2.default.any,
+	  panelType: _propTypes2.default.string.isRequired,
+	  togglePanel: _propTypes2.default.func.isRequired
+	};
+
 	exports.default = PanelHeader;
 
 /***/ }),
 /* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+
+	if (process.env.NODE_ENV !== 'production') {
+	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+	    Symbol.for &&
+	    Symbol.for('react.element')) ||
+	    0xeac7;
+
+	  var isValidElement = function(object) {
+	    return typeof object === 'object' &&
+	      object !== null &&
+	      object.$$typeof === REACT_ELEMENT_TYPE;
+	  };
+
+	  // By explicitly using `prop-types` you are opting into new development behavior.
+	  // http://fb.me/prop-types-in-prod
+	  var throwOnDirectAccess = true;
+	  module.exports = __webpack_require__(31)(isValidElement, throwOnDirectAccess);
+	} else {
+	  // By explicitly using `prop-types` you are opting into new production behavior.
+	  // http://fb.me/prop-types-in-prod
+	  module.exports = __webpack_require__(41)();
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+
+	'use strict';
+
+	var emptyFunction = __webpack_require__(10);
+	var invariant = __webpack_require__(13);
+	var ReactPropTypesSecret = __webpack_require__(32);
+
+	module.exports = function() {
+	  function shim(props, propName, componentName, location, propFullName, secret) {
+	    if (secret === ReactPropTypesSecret) {
+	      // It is still safe when called from React.
+	      return;
+	    }
+	    invariant(
+	      false,
+	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+	      'Use PropTypes.checkPropTypes() to call them. ' +
+	      'Read more at http://fb.me/use-check-prop-types'
+	    );
+	  };
+	  shim.isRequired = shim;
+	  function getShim() {
+	    return shim;
+	  };
+	  // Important!
+	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+	  var ReactPropTypes = {
+	    array: shim,
+	    bool: shim,
+	    func: shim,
+	    number: shim,
+	    object: shim,
+	    string: shim,
+	    symbol: shim,
+
+	    any: shim,
+	    arrayOf: getShim,
+	    element: shim,
+	    instanceOf: getShim,
+	    node: shim,
+	    objectOf: getShim,
+	    oneOf: getShim,
+	    oneOfType: getShim,
+	    shape: getShim
+	  };
+
+	  ReactPropTypes.checkPropTypes = emptyFunction;
+	  ReactPropTypes.PropTypes = ReactPropTypes;
+
+	  return ReactPropTypes;
+	};
+
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4857,6 +4984,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _propTypes = __webpack_require__(40);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var PanelBody = function PanelBody(_ref) {
@@ -4868,16 +4999,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	  );
 	};
 
+	PanelBody.propTypes = {
+	  content: _propTypes2.default.node.isRequired
+	};
+
 	exports.default = PanelBody;
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(42);
+	var content = __webpack_require__(44);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -4885,7 +5020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var options = {}
 	options.transform = transform
 	// add the styles to the DOM
-	var update = __webpack_require__(44)(content, options);
+	var update = __webpack_require__(46)(content, options);
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -4902,10 +5037,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(43)(undefined);
+	exports = module.exports = __webpack_require__(45)(undefined);
 	// imports
 
 
@@ -4916,7 +5051,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	/*
@@ -4998,7 +5133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -5044,7 +5179,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var	singletonCounter = 0;
 	var	stylesInsertedAtTop = [];
 
-	var	fixUrls = __webpack_require__(45);
+	var	fixUrls = __webpack_require__(47);
 
 	module.exports = function(list, options) {
 		if (false) {
@@ -5357,7 +5492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	
