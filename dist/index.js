@@ -5000,7 +5000,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	PanelBody.propTypes = {
-	  content: _propTypes2.default.node.isRequired
+	  content: _propTypes2.default.node
 	};
 
 	exports.default = PanelBody;
