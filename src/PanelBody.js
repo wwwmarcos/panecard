@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 
 const PanelBody = ({ content }) => (
   <div className='react-panel-body'>
-    { content }
+    {content}
   </div>
 )
 
 PanelBody.propTypes = {
-  content: PropTypes.node.isRequired
+  content: PropTypes.node
 }
 
 export default PanelBody
