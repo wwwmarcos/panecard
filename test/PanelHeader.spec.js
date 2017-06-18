@@ -1,6 +1,7 @@
 import test from 'ava'
 import React from 'react'
-import { shallow, render } from 'enzyme'
+import { shallow } from 'enzyme'
+import sinon from 'sinon'
 import PanelHeader from '../src/PanelHeader'
 import * as PanelTypes from '../src/PanelTypes'
 
@@ -41,7 +42,16 @@ test('Add react-panel-disabled when pass the sucess type', t => {
   t.true(wrapper.hasClass('react-panel-disabled'))
 })
 
-// test('Return close title in options when the panel is open', t => {
-//   const wrapper = render(<PanelHeader isOpen panelTitle='The best panel' panelType={PanelTypes.DISABLED} togglePanel={() => {}} />)
-//   t.is('close', wrapper.find('span'))
-// })
+test('Call the callback when click on span (panel title)', t => {
+  const mockOnClick = sinon.spy()
+  const wrapper = shallow(<PanelHeader isOpen panelTitle='The best panel' panelType={PanelTypes.DISABLED} togglePanel={mockOnClick} />)
+  wrapper.find('span').simulate('click')
+  t.true(mockOnClick.calledOnce)
+})
+
+test('Call the callback when click on icon', t => {
+  const mockOnClick = sinon.spy()
+  const wrapper = shallow(<PanelHeader isOpen panelTitle='The best panel' panelType={PanelTypes.DISABLED} togglePanel={mockOnClick} />)
+  wrapper.find('a').simulate('click')
+  t.true(mockOnClick.calledOnce)
+})
