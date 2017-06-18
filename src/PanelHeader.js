@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 const PanelHeader = ({ isOpen, panelTitle, options, togglePanel, panelType }) => {
   const getTitle = () => (
-    isOpen ? 'Minimizar' : 'Expandir'
+    isOpen ? 'Open' : 'Close'
   )
 
   return (
-    <div className={'react-panel-header react-panel-header-open react-panel-' + panelType + (isOpen ? ' react-panel-header-open' : '')}>
+    <div className={'react-panel-header react-panel-' + panelType + (isOpen ? ' react-panel-header-open' : '')}>
       <span onClick={togglePanel} title={getTitle()}>
         { panelTitle }
       </span>
