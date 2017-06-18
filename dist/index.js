@@ -4834,12 +4834,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      panelType = _ref.panelType;
 
 	  var getTitle = function getTitle() {
-	    return isOpen ? 'Minimizar' : 'Expandir';
+	    return isOpen ? 'Open' : 'Close';
 	  };
 
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'react-panel-header react-panel-header-open react-panel-' + panelType + (isOpen ? ' react-panel-header-open' : '') },
+	    { className: 'react-panel-header react-panel-' + panelType + (isOpen ? ' react-panel-header-open' : '') },
 	    _react2.default.createElement(
 	      'span',
 	      { onClick: togglePanel, title: getTitle() },
