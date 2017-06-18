@@ -2384,7 +2384,7 @@ faye-websocket@~0.11.0:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fbjs@^0.8.9:
+fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.12.tgz#10b5d92f76d45575fd63a217d4ea02bea2f8ed04"
   dependencies:
@@ -2829,6 +2829,14 @@ http-signature@~1.1.0:
 https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
+
+"https://github.com/marcosflorencio/react-panel.git":
+  name react-panel
+  version ""
+  resolved "https://github.com/marcosflorencio/react-panel.git#46c2952fde4afa2ab1d3254b829d8ace812b6a18"
+  dependencies:
+    react "^15.1.0"
+    react-dom "^15.1.0"
 
 hullabaloo-config-manager@^1.0.0:
   version "1.1.1"
@@ -4614,6 +4622,12 @@ prop-types@^15.5.10, prop-types@^15.5.4:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
 
+prop-types@15.5.6:
+  version "15.5.6"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.6.tgz#797a915b1714b645ebb7c5d6cc690346205bd2aa"
+  dependencies:
+    fbjs "^0.8.9"
+
 proxy-addr@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-1.1.4.tgz#27e545f6960a44a627d9b44467e35c1b6b4ce2f3"
@@ -4701,6 +4715,22 @@ react-dom@^15.1.0:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-dom@15.4.2:
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
+  dependencies:
+    fbjs "^0.8.1"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+
+react-ionicons:
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/react-ionicons/-/react-ionicons-1.5.7.tgz#4dd90330eac0e2aa8e928b5395145b167d67eb5a"
+  dependencies:
+    prop-types "15.5.6"
+    react "15.4.2"
+    react-dom "15.4.2"
+
 react-test-renderer:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.6.1.tgz#026f4a5bb5552661fd2cc4bbcd0d4bc8a35ebf7e"
@@ -4717,6 +4747,14 @@ react@^15.1.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
+
+react@15.4.2:
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
+  dependencies:
+    fbjs "^0.8.4"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"

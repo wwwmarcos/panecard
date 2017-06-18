@@ -38,7 +38,9 @@
   },
   "dependencies": {
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-ionicons": "^1.5.7",
+    "react-panel": "https://github.com/marcosflorencio/react-panel.git"
   },
   "ava": {
     "require": "babel-core/register",
