@@ -1,11 +1,11 @@
-.react-panel-header {
+.panecard-header {
   margin: 0.5px 0px 0.5px 0px;
   background-color: #ffffff;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 15px;
 }
 
-.react-panel-header span {
+.panecard-header span {
   font-size: 17px;
   text-decoration: none;
   font-weight: bold;
@@ -13,18 +13,18 @@
   color: #337ab7
 }
 
-.react-panel-header span:hover {
+.panecard-header span:hover {
   color: #235782;
 }
 
-.react-panel-body {
+.panecard-body {
   background-color: #ffffff;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 30px 30px 30px 30px;
   margin: 0px 0px 5px 0px;
 }
 
-.react-panel-header-open {
+.panecard-header-open {
   margin: 5px 0px 0px 0px;
 }
 
@@ -32,24 +32,24 @@
   padding: 0px 50px 0px 50px;
 }
 
-.react-panel-success {
+.panecard-success {
   background-color: #dff0d8;
 }
 
-.react-panel-warning {
+.panecard-warning {
   background-color: #fcf8e3;
 }
 
-.react-panel-danger {
+.panecard-danger {
   background-color: #f2dede;
 }
 
-.react-panel-info {
+.panecard-info {
   border: #ffffff;
   background-color: #d9edf7;
 }
 
-.react-panel-disabled {
+.panecard-disabled {
   background-color: #EBEBE4;
 }
 
@@ -58,17 +58,17 @@
   font-weight: 500;
 }
 
-.react-panel-sub-title {
+.panecard-sub-title {
   color: #6C7A89;
   margin-top: 10px;
   font-weight: 500;
   line-height: 20px;
 }
 
-.react-panel-line-height {
+.panecard-line-height {
   line-height: 20px;
 }
 
-.react-panel-options {
+.panecard-options {
   float: right;
 }

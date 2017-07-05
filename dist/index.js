@@ -4846,7 +4846,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'react-panel-header react-panel-' + panelType + (isOpen ? ' react-panel-header-open' : '') },
+	    { className: 'panecard-header panecard-' + panelType + (isOpen ? ' panecard-header-open' : '') },
 	    _react2.default.createElement(
 	      'span',
 	      { onClick: togglePanel, title: getTitle() },
@@ -4854,12 +4854,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ),
 	    _react2.default.createElement(
 	      'a',
-	      { className: 'react-panel-options', onClick: togglePanel, title: getTitle() },
+	      { className: 'panecard-options', onClick: togglePanel, title: getTitle() },
 	      isOpen ? closeIcon : expandIcon
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'react-panel-options' },
+	      { className: 'panecard-options' },
 	      options
 	    )
 	  );
@@ -9918,7 +9918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var content = _ref.content;
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'react-panel-body' },
+	    { className: 'panecard-body' },
 	    content
 	  );
 	};
@@ -9969,7 +9969,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".react-panel-header {\n  margin: 0.5px 0px 0.5px 0px;\n  background-color: #ffffff;\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  padding: 15px;\n}\n\n.react-panel-header span {\n  font-size: 17px;\n  text-decoration: none;\n  font-weight: bold;\n  cursor: pointer;\n  color: #337ab7\n}\n\n.react-panel-header span:hover {\n  color: #235782;\n}\n\n.react-panel-body {\n  background-color: #ffffff;\n  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  padding: 30px 30px 30px 30px;\n  margin: 0px 0px 5px 0px;\n}\n\n.react-panel-header-open {\n  margin: 5px 0px 0px 0px;\n}\n\n.minimized-card {\n  padding: 0px 50px 0px 50px;\n}\n\n.react-panel-success {\n  background-color: #dff0d8;\n}\n\n.react-panel-warning {\n  background-color: #fcf8e3;\n}\n\n.react-panel-danger {\n  background-color: #f2dede;\n}\n\n.react-panel-info {\n  border: #ffffff;\n  background-color: #d9edf7;\n}\n\n.react-panel-disabled {\n  background-color: #EBEBE4;\n}\n\n.card-sub-title {\n  color: #6C7A89;\n  font-weight: 500;\n}\n\n.react-panel-sub-title {\n  color: #6C7A89;\n  margin-top: 10px;\n  font-weight: 500;\n  line-height: 20px;\n}\n\n.react-panel-line-height {\n  line-height: 20px;\n}\n\n.react-panel-options {\n  float: right;\n}", ""]);
+	exports.push([module.id, ".panecard-header {\n  margin: 0.5px 0px 0.5px 0px;\n  background-color: #ffffff;\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  padding: 15px;\n}\n\n.panecard-header span {\n  font-size: 17px;\n  text-decoration: none;\n  font-weight: bold;\n  cursor: pointer;\n  color: #337ab7\n}\n\n.panecard-header span:hover {\n  color: #235782;\n}\n\n.panecard-body {\n  background-color: #ffffff;\n  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  padding: 30px 30px 30px 30px;\n  margin: 0px 0px 5px 0px;\n}\n\n.panecard-header-open {\n  margin: 5px 0px 0px 0px;\n}\n\n.minimized-card {\n  padding: 0px 50px 0px 50px;\n}\n\n.panecard-success {\n  background-color: #dff0d8;\n}\n\n.panecard-warning {\n  background-color: #fcf8e3;\n}\n\n.panecard-danger {\n  background-color: #f2dede;\n}\n\n.panecard-info {\n  border: #ffffff;\n  background-color: #d9edf7;\n}\n\n.panecard-disabled {\n  background-color: #EBEBE4;\n}\n\n.card-sub-title {\n  color: #6C7A89;\n  font-weight: 500;\n}\n\n.panecard-sub-title {\n  color: #6C7A89;\n  margin-top: 10px;\n  font-weight: 500;\n  line-height: 20px;\n}\n\n.panecard-line-height {\n  line-height: 20px;\n}\n\n.panecard-options {\n  float: right;\n}", ""]);
 
 	// exports
 

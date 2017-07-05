@@ -11,16 +11,16 @@ const PanelHeader = ({ isOpen, panelTitle, options, togglePanel, panelType }) =>
   const expandIcon = <Ionicon icon='ion-arrow-expand' fontSize='25px' />
 
   return (
-    <div className={'react-panel-header react-panel-' + panelType + (isOpen ? ' react-panel-header-open' : '')}>
+    <div className={'panecard-header panecard-' + panelType + (isOpen ? ' panecard-header-open' : '')}>
       <span onClick={togglePanel} title={getTitle()}>
         { panelTitle }
       </span>
 
-      <a className='react-panel-options' onClick={togglePanel} title={getTitle()}>
+      <a className='panecard-options' onClick={togglePanel} title={getTitle()}>
         {isOpen ? closeIcon : expandIcon}
       </a>
 
-      <div className='react-panel-options'>
+      <div className='panecard-options'>
         { options }
       </div>
     </div>

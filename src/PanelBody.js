@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const PanelBody = ({ content }) => (
-  <div className='react-panel-body'>
+  <div className='panecard-body'>
     {content}
   </div>
 )

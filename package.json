@@ -1,6 +1,7 @@
 {
-  "name": "react-panel",
+  "name": "panecard",
   "main": "dist/index.js",
+  "version": "1.0.0",
   "scripts": {
     "lint": "eslint src/**.js tests/**.js",
     "build": "webpack src/index.js dist/index.js --config webpack.config.js",
@@ -39,8 +40,7 @@
   "dependencies": {
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-ionicons": "^1.5.7",
-    "react-panel": "https://github.com/marcosflorencio/react-panel.git"
+    "react-ionicons": "^1.5.7"
   },
   "ava": {
     "require": "babel-core/register",

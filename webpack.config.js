@@ -1,7 +1,7 @@
 module.exports = {
   output: {
-    library: 'react-panel',
-    libraryTarget: 'umd',
+    library: 'panecard',
+    libraryTarget: 'umd'
   },
   devServer: {
     inline: true,
@@ -21,7 +21,7 @@ module.exports = {
       }
     }, {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader: 'style-loader!css-loader'
     }]
   }
 }
